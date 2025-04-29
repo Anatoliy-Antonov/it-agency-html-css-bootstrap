@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Работа для портфолио">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="(max-width: 1330px)" href="css/adaptation.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>IT-agency</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__main-container">
+            <div class="header__container">
+                <p class="header__logo"><span class="header__logo-accent">IT</span>-agency</p>
+                <nav class="navigation" role="navigation" aria-label="Главная навигация">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#cases" class="navigation__link">Портфолио</a></li>
+                        <li class="navigation__item"><a href="#services" class="navigation__link">Услуги</a></li>
+                        <li class="navigation__item"><a href="#about-us" class="navigation__link">О компании</a></li>
+                        <li class="navigation__item"><a href="#address" class="navigation__link">Контакты</a></li>
+                        <li class="navigation__item">
+                            <div class="navigation__button-group">
+                                <button type="button" class="navigation__button navigation__button-border" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</button>
+                                <button type="button" class="navigation__button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Меню</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header__modal">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal__header modal-header">
+                            <h5 class="modal__title modal-title fs-5" id="exampleModalLabel">Давайте обсудим ваш проект</h5>
+                            <button type="button" class="modal__btn_close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal__body modal-body">
+                            <div class="modal__container-content">
+                                <p class="modal__text lead">Мы свяжемся с вами в течение двух часов, чтобы
+                                    задать вопросы и обсудить, какую пользу можем
+                                    принести</p>
+                                <hr class="modal__hr">
+                                <form class="modal__form-content" id="modal_form" action="#" method="post">
+                                    <div class="modal__group">
+                                        <label class="modal__label" for="name">Имя</label>
+                                        <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="modal__group">
+                                        <label class="modal__label" for="email">Почта</label>
+                                        <input class="modal__input" type="email" id="email" name="email" placeholder="email" required>
+                                    </div>
+                                    <div class="modal__group">
+                                        <label class="modal__label" for="tel">Телефон</label>
+                                        <input class="modal__input" type="tel" id="tel" name="tel" placeholder="Телефон" required>
+                                    </div>
+                                    <div class="modal__group">
+                                        <label class="modal__label" for="comp">Название компании</label>
+                                        <input class="modal__input" type="text" id="comp" name="comp" placeholder="Название компании">
+                                    </div>
+                                    <div class="modal__group">
+                                        <label class="modal__label" for="type_service">Тип услуги</label>
+                                        <select class="modal__input" name="type_service" id="type_service" required>
+                                            <option class="modal__option" value="" selected disabled>Выберете одно из значений</option>
+                                            <option class="modal__option" value="Всё сразу">Всё сразу</option>
+                                            <option class="modal__option" value="Разработка ПО">Разработка ПО</option>
+                                            <option class="modal__option" value="UI/UX Дизайн">UI/UX Дизайн</option>
+                                            <option class="modal__option" value="DevOps & Облачные решения">DevOps & Облачные решения</option>
+                                        </select>
+                                    </div>
+                                </form>
+                                <hr class="modal__hr">
+                            </div>
+                        </div>
+                        <div class="modal__footer modal-footer">
+                            <div class="modal__btn-group">
+                                <button class="modal__btn" type="reset" form="modal_form">Очистить форму</button>
+                                <button class="modal__btn" type="submit" form="modal_form">Отправить заявку</button>
+                                <button type="button" class="modal__btn-close" data-bs-dismiss="modal" aria-label="Закрыть окно формы">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__menu">
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="menu__title offcanvas-title" id="offcanvasRightLabel">Меню</h5>
+                <button type="button" class="menu__btn_close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <hr class="menu__hr">
+            <div class="menu__container-list offcanvas-body">
+                <ul class="menu__list">
+                    <li class="menu__item"><button class="menu__button" data-bs-dismiss="offcanvas"><a href="#cases" class="menu__link lead">Портфолио</a></button></li>
+                    <li class="menu__item"><button class="menu__button" data-bs-dismiss="offcanvas"><a href="#services" class="menu__link lead">Услуги</a></button></li>
+                    <li class="menu__item"><button class="menu__button" data-bs-dismiss="offcanvas"><a href="#about-us" class="menu__link lead">О компании</a></button></li>
+                    <li class="menu__item"><button class="menu__button" data-bs-dismiss="offcanvas"><a href="#address" class="menu__link lead">Контакты</a></button></li>
+                </ul>
+                <hr class="menu__hr-second">
+                <i class="menu__icon fas fa-bars"></i>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+
+            <div class="slogan">
+                <p class="slogan__text">«От идеи — <span class="slogan__text-accent">к коду</span>, от кода — <span class="slogan__text-accent">к успеху</span>»</p>
+            </div>
+
+            <div id="about-us" class="about-us" aria-labelledby="about-us-title">
+                <h2 class="about-us__title" id="about-us-title">О нас</h2>
+                <div class="about-us__content">
+                    <h2 class="about-us__subtitle">IT-агентство полного цикла</h2>
+                    <hr class="about-us__hr">
+                    <div class="about-us__description">
+                        <p class="about-us__text lead">Мы — команда инженеров, дизайнеров и исследователей,
+                            которая превращает идеи в стабильные digital-продукты.</p>
+                        <p class="about-us__text lead">Наша философия — просто, быстро и с умом:</p>
+                    </div>
+                    <div class="about-us__principles">
+                        <div class="principle-card">
+                            <p class="principle-card__text">Упор на результат, а не на бюрократию</p>
+                            <i class="principle-card__icon fa-solid fa-bullseye"></i>
+                        </div>
+                        <div class="principle-card">
+                            <p class="principle-card__text">Только то, что действительно нужно бизнесу</p>
+                            <i class="principle-card__icon fa-solid fa-magnifying-glass-dollar"></i>
+                        </div>
+                        <div class="principle-card">
+                            <p class="principle-card__text">Прозрачность, гибкость и честный диалог</p>
+                            <i class="principle-card__icon fa-solid fa-people-arrows"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="services" class="services" aria-labelledby="services-title">
+                <h2 class="services__title" id="services-title">Наши услуги</h2>
+                <div class="develop">
+                    <h2 class="develop__title">Разработка ПО</h2>
+                    <hr class="develop__hr">
+                    <table class="develop__table">
+                        <tr>
+                            <td>
+                                <p class="develop__subtitle lead">От MVP до enterprise-решений с гарантией поддержки</p>
+                            </td>
+                            <td class="develop__container-icon" rowspan="2">
+                                <i class="develop__icon fa-solid fa-laptop-code"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul class="develop__list">
+                                    <li>Свой R&D центр</li>
+                                    <li>Стек: React/Node.js/Python</li>
+                                    <li>Сроки от 2 недель</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="develop__container">
+                        <div class="develop__container-list">
+                        </div>
+                        <div class="develop__container-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="design">
+                    <h2 class="design__title">UI/UX Дизайн</h2>
+                    <hr class="design__hr">
+                    <p class="design__subtitle lead">Увеличиваем конверсию интерфейсов на 40% через data-driven дизайн</p>
+                    <div class="design__container">
+                        <div class="design__container-block">
+                            <h3 class="design__container-title">Research</h3>
+                        </div>
+                        <svg class="design__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="100" height="24" viewBox="0 0 100 24" fill="none" stroke="#3751f3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h90M72 2l25 10-25 10"/>
+                        </svg>
+                        <div class="design__container-block">
+                            <h3 class="design__container-title">Wireframes</h3>
+                        </div>
+                        <svg class="design__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="100" height="24" viewBox="0 0 100 24" fill="none" stroke="#3751f3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h90M72 2l25 10-25 10"/>
+                        </svg>
+                        <div class="design__container-block">
+                            <h3 class="design__container-title">UI Kit</h3>
+                        </div>
+                        <svg class="design__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="100" height="24" viewBox="0 0 100 24" fill="none" stroke="#3751f3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h90M72 2l25 10-25 10"/>
+                        </svg>
+                        <div class="design__container-block">
+                            <h3 class="design__container-title">Development</h3>
+                        </div>
+                    </div>  
+                </div>
+                <div class="devops">
+                    <h2 class="devops__title">DevOps & Облачные решения</h2>
+                    <hr class="devops__hr">
+                    <table class="devops__table">
+                        <tr>
+                            <td>
+                                <p class="devops__subtitle lead">Снижаем затраты на инфраструктуру в 2 раза через грамотный DevOps</p>
+                            </td>
+                            <td class="devops__container-icon" rowspan="2">
+                                <i class="devops__icon fa-solid fa-server"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul class="develop__list">
+                                    <li>Миграция в облако (AWS/Azure/GCP) с нулевым простоем</li>
+                                    <li>Настройка CI/CD (GitLab CI, Jenkins, GitHub Actions)</li>
+                                    <li>Мониторинг и логирование (Prometheus, Grafana, ELK)</li>
+                                    <li>Infrastructure as Code (Terraform, Ansible)</li>
+                                    <li>Резервное копирование и DRP (Disaster Recovery Plan)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="reviews" aria-labelledby="reviews-title">
+                <h2 class="reviews__title" id="reviews-title">Отзывы наших клиентов</h2>
+                <div class="reviews__content">
+                    <div class="reviews__card">
+                        <div class="reviews__rating">
+                            <img class="reviews__rating-img" src="img/rating.svg" alt="Рейтинг">
+                        </div>
+                        <div class="reviews__person">
+                            <img class="reviews__foto" src="img/reviews_avatar.jpg" alt="Фото">
+                            <h4 class="reviews__full-name">Алексей, CEO стартапа в финтехе</h4>
+                        </div>
+                        <p class="reviews__text m-0">“Запустили MVP за 3 недели — чётко по плану, без срывов. Ребята реально вникают в бизнес, а не просто пишут код.”</p>
+                    </div>
+                    <div class="reviews__card">
+                        <div class="reviews__rating">
+                            <img class="reviews__rating-img" src="img/rating.svg" alt="Рейтинг">
+                        </div>
+                        <div class="reviews__person">
+                            <img class="reviews__foto" src="img/reviews_avatar.jpg" alt="Фото">
+                            <h4 class="reviews__full-name">Мария, продакт-менеджер e-commerce проекта</h4>
+                        </div>
+                        <p class="reviews__text m-0">“Дизайн сделали не только красивым, но и конверсионным. Трафик остался тем же, а продажи выросли на 35%.”</p>
+                    </div>
+                    <div class="reviews__card">
+                        <div class="reviews__rating">
+                            <img class="reviews__rating-img" src="img/rating.svg" alt="Рейтинг">
+                        </div>
+                        <div class="reviews__person">
+                            <img class="reviews__foto" src="img/reviews_avatar.jpg" alt="Фото">
+                            <h4 class="reviews__full-name">Игорь, CTO IT-компании</h4>
+                        </div>
+                        <p class="reviews__text m-0">“Объединили наш монолит с облачной инфраструктурой, настроили CI/CD. Теперь всё обновляется в один клик — кайф.”</p>
+                    </div>
+                    <div class="reviews__card">
+                        <div class="reviews__rating">
+                            <img class="reviews__rating-img" src="img/rating.svg" alt="Рейтинг">
+                        </div>
+                        <div class="reviews__person">
+                            <img class="reviews__foto" src="img/reviews_avatar.jpg" alt="Фото">
+                            <h4 class="reviews__full-name">Наталья, основатель EdTech-платформы</h4>
+                        </div>
+                        <p class="reviews__text m-0">“Сотрудничество ощущается как партнёрство. Всегда на связи, всегда с предложениями, всегда с решением.”</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cases" class="cases" aria-labelledby="cases-title">
+                <h2 class="cases__title" id="cases-title">Развиваем проекты лидеров рынка</h2>
+                <!-- Карточки с Bootstrap -->
+                <div class="cases__card-first">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://static.tildacdn.com/tild6638-3361-4266-b862-396338343562/logotip-vkusvill.png" class="card-img-top" alt="ВкусВилл">
+                        <div class="card-body">
+                           <h5 class="card-title">Кейс 1</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <a href="#"  role="button" class="card__button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://static.tildacdn.com/tild6638-3361-4266-b862-396338343562/logotip-vkusvill.png" class="card-img-top" alt="ВкусВилл">
+                        <div class="card-body">
+                           <h5 class="card-title">Кейс 2</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <a href="#" role="button" class="card__button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://static.tildacdn.com/tild6638-3361-4266-b862-396338343562/logotip-vkusvill.png" class="card-img-top" alt="ВкусВилл">
+                        <div class="card-body">
+                           <h5 class="card-title">Кейс 3</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <a href="#" role="button" class="card__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__card-second">
+                    <div class="cases__card-img">
+                        <i class="cases__img cases__img-scale fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://static.tildacdn.com/tild6638-3361-4266-b862-396338343562/logotip-vkusvill.png" class="card-img-top" alt="ВкусВилл">
+                        <div class="card-body">
+                           <h5 class="card-title">Кейс 4</h5>
+                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <a href="#" role="button" class="card__button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="cases__card-img">
+                        <i class="cases__img fa-solid fa-rocket"></i>
+                    </div>
+                </div>
+                <!-- Конец карточек -->
+            </div>
+
+            <div class="specialists" aria-labelledby="specialists-title">
+                <h2 class="specialists__title" id="specialists-title">Наши специалисты</h2>
+                <div class="specialists__container">
+                <table class="spicialists__content">
+                    <tr>
+                        <td class="specialists__container-icon">
+                            <i class="specialists__icon specialists__icon--mr fas fa-laptop-code"></i>
+                        </td>
+                        <td rowspan="2">
+                            <!-- Карусель с Bootstrap -->
+                            <div id="carouselExampleCaptions" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="carousel__button active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class="carousel__button"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="carousel__button"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://sun9-3.userapi.com/s/v1/ig2/x6PzbBZwNQYkwKaN8S9ltZji3KVPhk0qhTchkTP3Qc-TzhT7NGR3C3uboD-jWf6W37eJ-Al_fjBw5xivgIZI9sR9.jpg?quality=95&as=32x20,48x30,72x45,108x68,160x101,240x151,360x226,480x302,540x339,640x402,720x452,732x460&from=bu&u=oxarkPu9pepPfxs9HynckahwGljBnpa239TR-ymNLDk&cs=732x460" class="carousel__img d-block w-100" alt="Фото1">
+                                        <div class="carousel-caption d-block">
+                                            <h5 class="carousel__name">ФИО</h5>
+                                            <p class="carousel__post">Должность</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://sun9-3.userapi.com/s/v1/ig2/x6PzbBZwNQYkwKaN8S9ltZji3KVPhk0qhTchkTP3Qc-TzhT7NGR3C3uboD-jWf6W37eJ-Al_fjBw5xivgIZI9sR9.jpg?quality=95&as=32x20,48x30,72x45,108x68,160x101,240x151,360x226,480x302,540x339,640x402,720x452,732x460&from=bu&u=oxarkPu9pepPfxs9HynckahwGljBnpa239TR-ymNLDk&cs=732x460" class="carousel__img d-block w-100" alt="Фото2">
+                                        <div class="carousel-caption d-block">
+                                            <h5 class="carousel__name">ФИО</h5>
+                                            <p class="carousel__post">Должность</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://sun9-3.userapi.com/s/v1/ig2/x6PzbBZwNQYkwKaN8S9ltZji3KVPhk0qhTchkTP3Qc-TzhT7NGR3C3uboD-jWf6W37eJ-Al_fjBw5xivgIZI9sR9.jpg?quality=95&as=32x20,48x30,72x45,108x68,160x101,240x151,360x226,480x302,540x339,640x402,720x452,732x460&from=bu&u=oxarkPu9pepPfxs9HynckahwGljBnpa239TR-ymNLDk&cs=732x460" class="carousel__img d-block w-100" alt="Фото3">
+                                        <div class="carousel-caption d-block">
+                                            <h5 class="carousel__name">ФИО</h5>
+                                            <p class="carousel__post">Должность</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel__button-prev carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="carousel__button visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel__button-next carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="carousel__button visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- Конец карусели -->
+                        </td>
+                        <td class="specialists__container-icon">
+                            <i class="specialists__icon specialists__icon--ml fas fa-paintbrush"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="specialists__container-icon">
+                            <i class="specialists__icon specialists__icon--mr fas fa-chart-line"></i>
+                        </td>
+                        <td class="specialists__container-icon">
+                            <i class="specialists__icon specialists__icon--ml fas fa-server"></i>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+
+            <div class="advantages" aria-labelledby="advantages-title">
+                <h2 class="advantages__title" id="advantages-title">Почему мы?</h2>
+                <table class="advantages__table">
+                    <tr>
+                        <td class="advantages__container-image" rowspan="2">
+                            <i class="advantages_image advantages_image--scale fa-solid fa-thumbs-up"></i>
+                        </td>
+                        <td>
+                            <div class="advantages__content">
+                                <p class="advantages__content-title">Опытная команда</p>
+                                <hr class="advantages__hr">
+                                <p class="advantages__content-container">
+                                    <button class="advantages__button" type="button" data-bs-toggle="collapse" data-bs-target="#advantageFirst" aria-expanded="false" aria-controls="advantageFirst">
+                                        Подробнее 
+                                    </button>
+                                    <i class="advantages-icon fa-solid fa-user-tie"></i>    
+                                </p>
+                                <div style="min-height: 120px;">
+                                    <div class="advantages__collapse collapse collapse-horizontal" id="advantageFirst">
+                                        <div class="advantages__collapse-height card card-body" style="width: 300px;">
+                                            Профессионалы с 5+ годами опыта в разработке, дизайне и аналитике.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="advantages__content">
+                                <p class="advantages__content-title">Индивидуальный подход</p>
+                                <hr class="advantages__hr">
+                                <p class="advantages__content-container">
+                                    <button class="advantages__button" type="button" data-bs-toggle="collapse" data-bs-target="#advantageSecond" aria-expanded="false" aria-controls="advantageSecond">
+                                        Подробнее
+                                    </button>
+                                    <i class="advantages-icon fa-solid fa-user-gear"></i>
+                                </p>
+                                <div style="min-height: 120px;">
+                                    <div class="advantages__collapse collapse collapse-horizontal" id="advantageSecond">
+                                        <div class="advantages__collapse-height card card-body" style="width: 300px;">
+                                            Решения, tailored под ваш бизнес, а не шаблонные варианты.
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </td>
+                        <td rowspan="2" class="advantages__container-image advantages_td--textalign">
+                            <i class="advantages_image fa-solid fa-thumbs-up"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="advantages__content">
+                                <p class="advantages__content-title">Полный цикл разработки</p>
+                                <hr class="advantages__hr">
+                                <p class="advantages__content-container">
+                                    <button class="advantages__button" type="button" data-bs-toggle="collapse" data-bs-target="#advantageThird" aria-expanded="false" aria-controls="advantageThird">
+                                        Подробнее
+                                    </button>
+                                    <i class="advantages-icon fa-solid fa-diagram-project"></i>
+                                </p>
+                                <div style="min-height: 120px;">
+                                    <div class="advantages__collapse collapse collapse-horizontal" id="advantageThird">
+                                        <div class="advantages__collapse-height card card-body" style="width: 300px;">
+                                            От анализа и проектирования до внедрения и поддержки.
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </td>
+                        <td>
+                            <div class="advantages__content">
+                                <p class="advantages__content-title">Современные технологии</p>
+                                <hr class="advantages__hr">
+                                <p class="advantages__content-container">
+                                    <button class="advantages__button" type="button" data-bs-toggle="collapse" data-bs-target="#advantageFourth" aria-expanded="false" aria-controls="advantageFourth">
+                                        Подробнее
+                                    </button>
+                                    <i class="advantages-icon fa-solid fa-robot"></i>
+                                </p>
+                                <div style="min-height: 120px;">
+                                    <div class="advantages__collapse collapse collapse-horizontal" id="advantageFourth">
+                                        <div class="advantages__collapse-height card card-body" style="width: 300px;">
+                                            Используем актуальные стек и фреймворки (AI, блокчейн, IoT при необходимости).
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form" aria-labelledby="form-title">
+                <h2 class="form__title" id="form-title">Давайте обсудим ваш проект</h2>
+                <div class="form__container">
+                    <div class="form__container-icon">
+                        <i class="form__icon fas fa-user"></i>
+                    </div>
+                    <div class="form__container-content">
+                        <p class="form__text lead">Мы свяжемся с вами в течение двух часов, чтобы
+                            задать вопросы и обсудить, какую пользу можем
+                            принести</p>
+                        <hr class="form__hr">
+                        <form class="form__form-content" id="form" action="#" method="post">
+                            <div class="form__group">
+                                <label class="form__label" for="name">Имя</label>
+                                <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="email">Почта</label>
+                                <input class="form__input" type="email" id="email" name="email" placeholder="email" required>
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="tel">Телефон</label>
+                                <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон" required>
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="comp">Название компании</label>
+                                <input class="form__input" type="text" id="comp" name="comp" placeholder="Название компании">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="type_service">Тип услуги</label>
+                                <select class="form__input form__input" name="type_service" id="type_service" required>
+                                    <option class="form__option" value="" selected disabled>Выберете одно из значений</option>
+                                    <option class="form__option" value="Всё сразу">Всё сразу</option>
+                                    <option class="form__option" value="Разработка ПО">Разработка ПО</option>
+                                    <option class="form__option" value="UI/UX Дизайн">UI/UX Дизайн</option>
+                                    <option class="form__option" value="DevOps & Облачные решения">DevOps & Облачные решения</option>
+                                </select>
+                            </div>
+                            <div class="form__btn-group">
+                                <button class="form__btn" type="reset">Очистить форму</button>
+                                <button class="form__btn" type="submit">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form__container-icon">
+                        <i class="form__icon fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content footer__content-list">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#cases" class="footer__link lead">Портфолио</a></li>
+                    <li class="footer__item"><a href="#services" class="footer__link lead">Услуги</a></li>
+                    <li class="footer__item"><a href="#about-us" class="footer__link lead">О компании</a></li>
+                    <li class="footer__item"><a href="#address" class="footer__link lead">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__content footer__content-address">
+                <address id="address" class="footer__address">
+                    <pre class="footer__address-text"><span class="footer__adress-text--span">Почта:</span>  itagency@gmail.com</pre>
+                    <pre class="footer__address-text"><span class="footer__adress-text--span">Телефон:</span>  +7(999)-234-23-34</pre>
+                    <pre class="footer__address-text"><span class="footer__adress-text--span">Адрес:</span>  г. Москва, ул. Пушкина, д.12</pre>
+                    <div class="footer__group-link">
+                        <a href="#" class="footer__link-icon"><i class="footer__icon-tg fab fa-telegram"></i></a>
+                        <a href="#" class="footer__link-icon"><i class="footer__icon-vk fab fa-vk"></i></a>
+                    </div>
+                </address>
+            </div>
+        </div>
+        <hr class="footer__hr">
+        <div class="footer__data">
+            <p class="footer__data-maindata">IT-agency © 2025</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/d08c6bf21e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
